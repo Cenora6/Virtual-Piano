@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Virtual Piano.iml" filepath="$PROJECT_DIR$/.idea/Virtual Piano.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../virtual-piano/.idea/virtual-piano.iml" filepath="$PROJECT_DIR$/../virtual-piano/.idea/virtual-piano.iml" />
     </modules>
   </component>
 </project>

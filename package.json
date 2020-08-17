@@ -1,0 +1,23 @@
+{
+  "name": "virtual-piano",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cenora6/Virtual-Piano.git"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/Cenora6/Virtual-Piano/issues"
+  },
+  "homepage": "https://github.com/Cenora6/Virtual-Piano#readme",
+  "devDependencies": {
+    "@types/node": "^14.6.0",
+    "typescript": "^3.9.7"
+  }
+}

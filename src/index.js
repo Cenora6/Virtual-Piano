@@ -1,5 +1,6 @@
 document.addEventListener("keypress", function (event) {
 
+    event.preventDefault()
     let audio = document.createElement("AUDIO");
 
     if(event.key === "a") {
