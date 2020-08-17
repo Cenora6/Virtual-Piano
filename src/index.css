@@ -1,68 +1,110 @@
+html {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: darkolivegreen;
     height: 100vh;
 }
 
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 60%;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(49,49,57,1) 46%, rgba(75,74,74,1) 100%);
+    border-radius: 1rem;
 }
 
-.white-keys {
+.buttons {
+    display: flex;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+button {
+    margin-bottom: 1rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: linear-gradient(0deg, rgba(128,0,0,1) 0%, rgba(171,0,0,1) 46%, rgba(241,0,0,1) 100%);
+    border: none;
+    box-shadow: 5px 5px 8px black;
+    cursor: pointer;
+}
+
+.buttons span {
+    padding: .5rem;
+    outline: none;
+}
+
+.piano {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.white-keys, .black-keys {
     display: flex;
 }
 
-.white-keys kbd {
+kbd {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    padding: 20px 10px;
-    margin-left: 0;
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: 'Gloria Hallelujah', cursive;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding: 2rem 1rem;
+}
+
+.white-keys kbd {
     background-color: white;
     width: 70px;
     height: 300px;
-    text-align: center;
-    border: 5px solid darkgrey;
+    border: 5px solid #a9a9a9;
+    margin: .1rem;
     position: relative;
 }
 
 .black-keys {
-    display: flex;
     position: absolute;
 }
 
 .black-keys kbd {
-    padding: 20px 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
-    background-color: black;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(74,74,79,1) 46%, rgba(169,169,169,1) 100%);
     width: 50px;
     height: 180px;
-    top: -67px;
+    top: -4.05rem;
     color: white;
 }
 
 .W {
-    left: -110px;
+    left: -7.7rem;
 }
 
 .E {
-    left: -75px;
+    left: -5.8rem;
 }
 
 .T {
-    left: 50px;
+    left: 3.7rem;
 }
 
 .Y {
-    left: 80px;
+    left: 5.8rem;
 }
 
 .U {
-    left: 110px;
+    left: 7.8rem;
 }
