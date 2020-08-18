@@ -13,22 +13,38 @@ body {
     background: -webkit-linear-gradient(to top, #2E1437, #948E99);
     background: linear-gradient(to top, #2E1437, #948E99);
     height: 100vh;
+    user-select: none;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem 0;
 }
 
 .title h1 {
+    margin: 0;
     font-size: 5rem;
     font-family: 'Raleway Dots', cursive;
     font-weight: 400;
 }
 
+.title span {
+    font-family: 'Baloo Tamma 2', cursive;
+    opacity: .5;
+    padding: .1rem .5rem;
+}
+
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     width: 50%;
     height: 60%;
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(49,49,57,1) 46%, rgba(75,74,74,1) 100%);
+    background: #000000;
+    background: -webkit-linear-gradient(to top, #000000, #313139, #4B4A4A);
+    background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(49, 49, 57) 46%, rgb(75, 74, 74) 100%);
     border-radius: 1rem;
 }
 
@@ -36,7 +52,6 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-around;
-    align-items: center;
     margin: 1rem;
     padding: 1rem;
 }
@@ -44,7 +59,6 @@ body {
 .record, .play {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
@@ -52,9 +66,11 @@ button {
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
-    background: linear-gradient(0deg, rgba(128,0,0,1) 0%, rgba(171,0,0,1) 46%, rgba(241,0,0,1) 100%);
+    background: #800000;
+    background: -webkit-linear-gradient(to top, #800000, #AB0000, #F10000);
+    background: linear-gradient(0deg, rgb(128, 0, 0) 0%, rgb(171, 0, 0) 46%, rgb(241, 0, 0) 100%);
     border: none;
-    box-shadow: 5px 5px 8px black;
+    box-shadow: 5px 5px 8px #000000;
     cursor: pointer;
     z-index: 10;
     position: relative;
@@ -66,20 +82,16 @@ button {
     border-radius: 50%;
     width: 2rem;
     height: 2rem;
-    background: red;
-    z-index: -1;
+    background: #F10000;
     left: 0;
     top: -.3rem;
 }
 
 .buttons .text {
     margin-bottom: .5rem;
-    outline: none;
     font-family: 'Baloo Tamma 2', cursive;
-    /*font-family: 'Gloria Hallelujah', cursive;*/
     font-size: .8rem;
-    font-weight: 400;
-    color: white;
+    color: #FFFFFF;
     text-transform: uppercase;
 }
 
@@ -111,29 +123,27 @@ kbd {
     justify-content: center;
     align-items: flex-end;
     font-size: 2rem;
-    font-weight: 500;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     padding: 2rem 1rem;
     cursor: pointer;
-    user-select: none;
 }
 
 .white-keys kbd:hover {
-    background: rgba(212,212,212,1);
+    background: #D4D4D4;
 }
 
 .black-keys kbd:hover {
-    background: rgba(33,33,33,1);
+    background: #212121;
 }
 
 .white-keys kbd {
-    background-color: white;
+    position: relative;
+    background-color: #FFFFFF;
     width: 4.375rem;
     height: 18.75rem;
-    border: 5px solid #a9a9a9;
+    border: .3rem solid #a9a9a9;
     margin: .1rem;
-    position: relative;
 }
 
 .black-keys {
@@ -143,9 +153,9 @@ kbd {
 .black-keys kbd {
     position: relative;
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(74,74,79,1) 46%, rgba(169,169,169,1) 100%);
-    width: 50px;
-    height: 180px;
-    top: -4.1rem;
+    width: 3.125rem;
+    height: 11.25rem;
+    top: -4.05rem;
     color: white;
 }
 
