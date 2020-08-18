@@ -12,7 +12,6 @@ The project was created based on a JetBrains course.
 - HTML
 - CSS
 - TypeScript
-- JavaScript
 
 ## Preview:
 Check the preview of the game here: *https://cenora6.github.io/Virtual-Piano/*
