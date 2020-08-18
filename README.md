@@ -1,6 +1,6 @@
 # Virtual-Piano
 
-![](preview/preview.png)
+![](src/preview/preview.png)
 
 A simple virtual piano which can be used to play a music on virtual piano's keyboard. Record button which records the music played on the piano and a play button which enable listening to the recorder music were added as an additional feature.
 
