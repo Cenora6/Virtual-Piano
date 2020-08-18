@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/Cenora6/Virtual-Piano/issues"
   },
-  "homepage": "https://github.com/Cenora6/Virtual-Piano#readme",
+  "homepage": "https://cenora6.github.io/Virtual-Piano/",
   "devDependencies": {
     "@types/node": "^14.6.0",
     "typescript": "^3.9.7"
