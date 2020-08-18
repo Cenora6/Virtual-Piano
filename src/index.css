@@ -24,13 +24,22 @@ body {
 }
 
 .buttons {
+    width: 100%;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
     margin: 1rem;
     padding: 1rem;
 }
 
+.record, .play {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 button {
-    margin-bottom: 1rem;
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
@@ -38,11 +47,40 @@ button {
     border: none;
     box-shadow: 5px 5px 8px black;
     cursor: pointer;
+    z-index: 10;
+    position: relative;
+    outline: none;
 }
 
-.buttons span {
-    padding: .5rem;
+.buttons .shadow {
+    position: absolute;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    background: red;
+    z-index: -1;
+    left: 0;
+    top: -.3rem;
+}
+
+.buttons .text {
+    margin-bottom: .5rem;
     outline: none;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 1.5rem;
+}
+
+button.on {
+    background: #1e451f;
+}
+
+.buttons button.on .text {
+    color: #3e8e41;
+}
+
+button.on > .shadow {
+    background-color: #3e8e41;
+    transform: translateY(.15rem);
 }
 
 .piano {
@@ -69,8 +107,8 @@ kbd {
 
 .white-keys kbd {
     background-color: white;
-    width: 70px;
-    height: 300px;
+    width: 4.375rem;
+    height: 18.75rem;
     border: 5px solid #a9a9a9;
     margin: .1rem;
     position: relative;
@@ -85,7 +123,7 @@ kbd {
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(74,74,79,1) 46%, rgba(169,169,169,1) 100%);
     width: 50px;
     height: 180px;
-    top: -4.05rem;
+    top: -4.1rem;
     color: white;
 }
 

@@ -1,3 +1,73 @@
+const buttonRecord = document.querySelector(".record button") as HTMLButtonElement;
+const buttonPlay = document.querySelector(".play button") as HTMLButtonElement;
+const play = document.querySelector(".play") as HTMLDivElement;
+declare const MediaRecorder: any;
+
+const audio = document.createElement('audio') as HTMLAudioElement;
+play.appendChild(audio);
+let chunks: any = [];
+
+if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+    navigator.mediaDevices.getUserMedia (
+        {
+            audio: true
+        })
+
+        .then(function(stream) {
+            const mediaRecorder = new MediaRecorder(stream);
+
+            buttonRecord!.addEventListener("click", function () {
+                this.classList.toggle('on');
+
+                if(buttonPlay.className === "on") {
+                    buttonPlay.classList.toggle('on');
+                }
+
+                if(this.className === "on") {
+                    mediaRecorder.start();
+                    console.log(mediaRecorder.state);
+                    console.log("recorder started");
+                } else {
+                    mediaRecorder.stop();
+                    console.log(mediaRecorder.state);
+                    console.log("recorder stopped");
+                }
+            });
+
+            mediaRecorder.ondataavailable = function(e: any) {
+                chunks.push(e.data);
+            }
+
+            mediaRecorder.onstop = function(e: any) {
+                console.log("recorder stopped!!");
+
+                let audioData = new Blob(chunks,
+                    { 'type': 'audio/mp3;' });
+                chunks = [];
+                audio.src = window.URL.createObjectURL(audioData);
+                console.log(audio.src);
+                //
+                // const blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' });
+                // chunks = [];
+                // const audioURL = window.URL.createObjectURL(blob);
+                // audio.src = audioURL;
+                //
+                // deleteButton.onclick = function(e) {
+                //     let evtTgt = e.target;
+                //     evtTgt.parentNode.parentNode.removeChild(evtTgt.parentNode);
+                // }
+            }
+
+        })
+
+        .catch(function(err) {
+                console.log('The following getUserMedia error occured: ' + err);
+            }
+        );
+} else {
+    console.log('getUserMedia not supported on your browser!');
+}
+
 document.addEventListener("keypress", function (event: KeyboardEvent) {
 
     let audio = document.createElement("AUDIO") as HTMLAudioElement;
@@ -41,3 +111,21 @@ document.addEventListener("keypress", function (event: KeyboardEvent) {
     }
 
 })
+
+
+
+buttonPlay!.addEventListener("click", function () {
+    console.log(this.className)
+    this.classList.toggle('on');
+
+    if(buttonRecord.className === "on") {
+        buttonRecord.classList.toggle('on');
+    }
+
+    if(this.className === "on") {
+        audio.play();
+        console.log(audio.duration)
+    } else {
+        audio.pause();
+    }
+});
