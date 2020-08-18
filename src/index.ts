@@ -34,7 +34,7 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
                 chunks.push(e.data);
             }
 
-            mediaRecorder.onstop = function(e: any) {
+            mediaRecorder.onstop = function() {
                 let audioData = new Blob(chunks,
                     { 'type': 'audio/mp3;' });
                 chunks = [];
