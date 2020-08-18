@@ -2,14 +2,23 @@ html {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    overflow: hidden;
 }
 
 body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    background-color: darkolivegreen;
+    background: #948E99;
+    background: -webkit-linear-gradient(to top, #2E1437, #948E99);
+    background: linear-gradient(to top, #2E1437, #948E99);
     height: 100vh;
+}
+
+.title h1 {
+    font-size: 5rem;
+    font-family: 'Raleway Dots', cursive;
+    font-weight: 400;
 }
 
 .container {
@@ -66,8 +75,12 @@ button {
 .buttons .text {
     margin-bottom: .5rem;
     outline: none;
-    font-family: 'Gloria Hallelujah', cursive;
-    font-size: 1.5rem;
+    font-family: 'Baloo Tamma 2', cursive;
+    /*font-family: 'Gloria Hallelujah', cursive;*/
+    font-size: .8rem;
+    font-weight: 400;
+    color: white;
+    text-transform: uppercase;
 }
 
 button.on {
@@ -99,10 +112,19 @@ kbd {
     align-items: flex-end;
     font-size: 2rem;
     font-weight: 500;
-    font-family: 'Gloria Hallelujah', cursive;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     padding: 2rem 1rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.white-keys kbd:hover {
+    background: rgba(212,212,212,1);
+}
+
+.black-keys kbd:hover {
+    background: rgba(33,33,33,1);
 }
 
 .white-keys kbd {
