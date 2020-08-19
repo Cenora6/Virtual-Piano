@@ -26,7 +26,7 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
         mediaRecorder.ondataavailable = function (e) {
             chunks.push(e.data);
         };
-        mediaRecorder.onstop = function (e) {
+        mediaRecorder.onstop = function () {
             let audioData = new Blob(chunks, { 'type': 'audio/mp3;' });
             chunks = [];
             audio.src = window.URL.createObjectURL(audioData);
