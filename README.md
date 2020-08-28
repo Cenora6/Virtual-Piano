@@ -14,4 +14,4 @@ To record the music you need to turn the microphone on and allow the website to 
 - TypeScript
 
 ## Preview:
-Check the preview of the game here: *https://cenora6.github.io/Virtual-Piano/*
+Check the preview here: *https://cenora6.github.io/Virtual-Piano/*
