@@ -23,6 +23,9 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
                 mediaRecorder.stop();
             }
         });
+        buttonPlay.addEventListener("click", function () {
+            mediaRecorder.stop();
+        });
         mediaRecorder.ondataavailable = function (e) {
             chunks.push(e.data);
         };

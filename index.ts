@@ -30,6 +30,10 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
                 }
             });
 
+            buttonPlay!.addEventListener("click", function () {
+                    mediaRecorder.stop();
+            })
+
             mediaRecorder.ondataavailable = function(e: any) {
                 chunks.push(e.data);
             }
