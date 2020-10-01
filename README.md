@@ -20,3 +20,8 @@ To record the music you need to turn the microphone on and allow the website to 
 | HTML5 | A markup language used for structuring, and presenting content on the World Wide Web. |
 | CSS | A simple mechanism for adding style to Web documents. |
 | [Typescript](https://www.npmjs.com/package/typescript/) | An open-source language which builds on JavaScript. |
+
+## Installation:
+[node.js](http://nodejs.org/download/) is required to use ``npm``.
+
+-  ```git clone https://github.com/Cenora6/Virtual-Piano.git``` to clone the repository and to open the website in the browser
